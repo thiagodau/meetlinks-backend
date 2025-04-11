@@ -4,9 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "start:prod": "npm install --omit=dev && node index.js"
-
+    "start": "npm install --omit=dev && node index.js"
   },
   "keywords": [],
   "author": "thiagodau",

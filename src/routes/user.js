@@ -3,7 +3,7 @@ import { pool } from "../db/index.js";
 
 const router = express.Router();
 
-router.get("/u/:google_id", async (req, res) => {
+router.get("u/:google_id", async (req, res) => {
   const { google_id } = req.params;
 
   try {

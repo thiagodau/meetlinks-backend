@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start:prod": "npm install --omit=dev && node index.js"
+
   },
   "keywords": [],
   "author": "thiagodau",

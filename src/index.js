@@ -37,15 +37,12 @@ app.use((req, res, next) => {
   next();
   });*/
 
-app.use(cors({
-  origin: process.env.FRONT_END_BASE_URL, // Permite apenas o seu frontend
-  credentials: true // Se estiver usando cookies ou sessões
-}));
+app.use(cors());  // Permite de qualquer origem
 
-app.use("/auth", authRoutes);
 app.use("/", userRoutes);
+app.use("/auth", authRoutes);
 app.use("/meet", meetRoutes);
-app.use('/api/rooms', roomsRoutes); 
+app.use('/api/rooms', roomsRoutes);
 
 app.get("/", (req, res) => {
   res.status(201).json({ message: "MeetLinks API rodando! 🚀" });
